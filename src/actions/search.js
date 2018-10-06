@@ -4,9 +4,11 @@ import changeVideo from './currentVideo.js';
 import YOUTUBE_API_KEY from '../config/youtube.js';
 
 
-var handleVideoSearch = (q) => {
- 
+var handleVideoSearch = (q) => ({
+
   //TODO:  Write an asynchronous action to handle a video search!
-};
+  type: 'New_Search',
+  value: q
+});
 
 export default handleVideoSearch;
