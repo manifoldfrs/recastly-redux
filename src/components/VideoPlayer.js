@@ -1,4 +1,5 @@
 import React from 'react';
+import VideoDetails from './VideoDetails.js';
 
 var VideoPlayer = ({video}) => (
   !video
@@ -9,6 +10,7 @@ var VideoPlayer = ({video}) => (
       </div>
       <div className="video-player-details">
         <h3>{video.snippet.title}</h3>
+        <VideoDetails video={video}/>
         <div>{video.snippet.description}</div>
       </div>
     </div>

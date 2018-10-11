@@ -1,4 +1,5 @@
 import React from 'react';
+import VideoDetails from './VideoDetails.js';
 
 var VideoListEntry = ({video, handleVideoListEntryTitleClick}) => (
   <div className="video-list-entry">
@@ -12,6 +13,7 @@ var VideoListEntry = ({video, handleVideoListEntryTitleClick}) => (
       >
         {video.snippet.title}
       </div>
+      <VideoDetails video={video}/>
       <div className="video-list-entry-detail">{video.snippet.description}</div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 var searchYouTube = ({key, query, max = 5}, callback) => {
   $.get('https://www.googleapis.com/youtube/v3/search', {
-    part: 'snippet',
+    part: 'snippet,id',
     key: key,
     q: query,
     maxResults: max,
@@ -9,8 +9,10 @@ var searchYouTube = ({key, query, max = 5}, callback) => {
   })
     .done(({items}) => {
       if (callback) {
+
         callback(items);
       }
+      console.log(items[0]);
     })
     .fail(({responseJSON}) => {
       responseJSON.error.errors.forEach((err) =>
